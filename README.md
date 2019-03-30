@@ -45,3 +45,13 @@ Some of the error faced during implementation:
   + Because I was using PulseAudio and BlueALSA together
 - unknown PCM when using aplay
 - Couldn't find the default controller when connecting the bluetooth
+- The sound card was not found
+  + It has to be added manually by using "modprobe snd_bcm2835"
+- Segmentation fault
+  + The sound card was not found on raspberypi3_64_defconfig, but it was easily found on raspberypi3
+- When connecting the USB you have to determine the device's type
+  + You can get the device's type using "fdisk -l"
+- The bluetooth pairs but doesn't connect
+  + This error happens if you didn't run the bluealsa daemon
+- HCI not found
+  + This error occurs when micro c is used, but if you use external toolchain or glibc the error is fixed
