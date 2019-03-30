@@ -12,6 +12,7 @@ chmod 755 ${TARGET_DIR}/etc/init.d/S10mdev
 cp package/busybox/mdev.conf ${TARGET_DIR}/etc/mdev.conf
 - select rpi-wifi-firmware from buildroot menuconfig
 - select wpa supplicant in buildroot configuraions
+
 - edit wpa_supplicant.conf :
 
 country=BE
@@ -24,13 +25,16 @@ network={
 }
 
 - install wall and openssh
-- Bluetooth Configuraions:
+Bluetooth Configuraions:
+
 - select rpi-bt-firmware from buildroot menuconfig.
 - also select the bt43-firmware and sbc.
 - install bluez 5 from buildroot menuconfig.
 - edit cmdline.txt to be like this:
 root=/dev/mmcblk0p2 rootwait console=tty1 console=serial0,115200 
+
 Audio Configurations: 
+
 - install alsa-utils and alsa lib from buildroot menuconfig.
 - install bluez-alsa to stream audio through bluetooth.
 - install mpg123 audio player.
