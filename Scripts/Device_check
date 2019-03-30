@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while [ true ]
+do
+   if grep $BT_MAC mac; then
+    killall bt-adapter
+break
+echo found
+fi
+done

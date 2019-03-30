@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+while true; do
+  if ! df | grep -q "/dev/sd"; then
+      partitions="$(fdisk -l /dev/sd* | grep -v 'Unknown' | awk '/^\/dev\/sd/ {print $1}')"
+      for partition in $partitions; do
+          mountpoint="/media/$(basename $partition)"
+          mkdir -p $mountpoint
+          mount $partition $mountpoint
+      done
+  fi
+
+done

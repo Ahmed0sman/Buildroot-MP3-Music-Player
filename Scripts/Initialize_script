@@ -1,0 +1,10 @@
+#!/bin/sh
+modprobe hci_uart
+sleep 2
+hciattach /dev/ttyAMA0 bcm43xx 921600 noflow
+sleep 2
+hciconfig hci0 up
+/usr/libexec/bluetooth/bluetoothd &
+sudo chmod 777 /usr/bin/bluealsa 
+/usr/bin/bluealsa &
+

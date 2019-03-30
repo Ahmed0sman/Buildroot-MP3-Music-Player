@@ -1,0 +1,15 @@
+#!/bin/sh
+while true
+do
+	
+	if [ $? -eq 0 ]; then
+		echo "Device Created";
+		nohup mount -a ntfs -o rw /dev/sda1 /media
+		cd /media
+		ls *.mp3 > text
+		break;
+	else
+		echo "waiting for device"
+		sleep 1;
+	fi
+done
