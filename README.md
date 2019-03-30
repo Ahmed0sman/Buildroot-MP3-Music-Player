@@ -35,8 +35,8 @@ Bluetooth Configuraions:
 4- edit cmdline.txt to be like this:
 root=/dev/mmcblk0p2 rootwait console=tty1 console=serial0,115200 
 
-Audio Configurations: 
-1- install alsa-utils and alsa lib from buildroot menuconfig.
-2- install bluez-alsa to stream audio through bluetooth.
-3- install mpg123 audio player.
-4- install espeak for text to speech.
+Audio Configurations: \n
+1- install alsa-utils and alsa lib from buildroot menuconfig.\n
+2- install bluez-alsa to stream audio through bluetooth.\n
+3- install mpg123 audio player.\n
+4- install espeak for text to speech.\n
