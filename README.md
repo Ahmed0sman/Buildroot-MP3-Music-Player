@@ -7,9 +7,9 @@ Then, the user connect his bluetooth device.after that, he should start the prog
 
 Wifi Configuraions:
 - add this lines to your Post-build script:
-cp package/busybox/S10mdev ${TARGET_DIR}/etc/init.d/S10mdev
-chmod 755 ${TARGET_DIR}/etc/init.d/S10mdev
-cp package/busybox/mdev.conf ${TARGET_DIR}/etc/mdev.conf
+  -cp package/busybox/S10mdev ${TARGET_DIR}/etc/init.d/S10mdev
+  -chmod 755 ${TARGET_DIR}/etc/init.d/S10mdev
+  -cp package/busybox/mdev.conf ${TARGET_DIR}/etc/mdev.conf
 - select rpi-wifi-firmware from buildroot menuconfig
 - select wpa supplicant in buildroot configuraions
 
