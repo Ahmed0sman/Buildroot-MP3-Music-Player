@@ -23,10 +23,9 @@ network={
   psk="Your Password"
   key_mgmt=WPA-PSK
 }
-
 - install wall and openssh
-Bluetooth Configuraions:
 
+Bluetooth Configuraions:
 - select rpi-bt-firmware from buildroot menuconfig.
 - also select the bt43-firmware and sbc.
 - install bluez 5 from buildroot menuconfig.
@@ -34,7 +33,6 @@ Bluetooth Configuraions:
 root=/dev/mmcblk0p2 rootwait console=tty1 console=serial0,115200 
 
 Audio Configurations: 
-
 - install alsa-utils and alsa lib from buildroot menuconfig.
 - install bluez-alsa to stream audio through bluetooth.
 - install mpg123 audio player.
