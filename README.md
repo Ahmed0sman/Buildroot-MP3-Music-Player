@@ -15,14 +15,14 @@ Wifi Configuraions:
 
 - edit wpa_supplicant.conf :
 
-_country=BE 
+country=BE 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 network={
 ssid="Your SSId"
 psk="Your Password"
-key_mgmt=WPA-PSK
-}_
+key_mgmt=WPA-PSK 
+}
 
 - install wall and openssh
 
