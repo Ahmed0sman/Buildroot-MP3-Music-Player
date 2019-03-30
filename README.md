@@ -15,14 +15,14 @@ Wifi Configuraions:
 
 - edit wpa_supplicant.conf :
 
-  * country=BE
-  * ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-  * update_config=1
-  * network={
-  * ssid="Your SSId"
-  * psk="Your Password"
-  * key_mgmt=WPA-PSK
-  * }
+  *country=BE
+   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+   update_config=1
+   network={
+   ssid="Your SSId"
+  psk="Your Password"
+  key_mgmt=WPA-PSK
+  }*
 - install wall and openssh
 
 Bluetooth Configuraions:
