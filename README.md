@@ -37,3 +37,11 @@ Audio Configurations:
 - install bluez-alsa to stream audio through bluetooth.
 - install mpg123 audio player.
 - install espeak for text to speech.
+
+Some of the error faced during implementation:
+- The program was not intended to be run as root when using pulseaudio
+- Write error because the device was not found when using aplay
+- Couldn't get BlueALSA transport when using aplay
+  + Because I was using PulseAudio and BlueALSA together
+- unknown PCM when using aplay
+- Couldn't find the default controller when connecting the bluetooth
